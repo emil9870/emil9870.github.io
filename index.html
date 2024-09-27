@@ -3,33 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h2>PORTFOLIO</h2>
-            <div class="menu">
-                <button class="dropdown-btn">About Me</button>
-                <button class="dropdown-btn">Work Experience</button>
-                <button class="dropdown-btn">Skills</button>
-                <button class="dropdown-btn">My Work</button>
-                <button class="dropdown-btn">Contact Me</button>
+    <nav id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#about" class="active">About Me</a></li>
+            <li><a href="#work">Work Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <li>
+                <a href="#projects">Projects</a>
+                <ul class="nested">
+                    <li><a href="#project1">Project 1</a></li>
+                    <li><a href="#project2">Project 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="content">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Information about you...</p>
+        </section>
+        <section id="work">
+            <h2>Work Experience</h2>
+            <p>Details of your work experience...</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>List your skills here...</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>How to contact you...</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Details of your projects...</p>
+            <div id="project1">
+                <h3>Project 1</h3>
+                <p>Description of Project 1...</p>
             </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <div id="content">
-                <h1>Welcome to my portfolio!</h1>
-                <p>Click the links on the left to explore.</p>
+            <div id="project2">
+                <h3>Project 2</h3>
+                <p>Description of Project 2...</p>
             </div>
-        </div>
+        </section>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
