@@ -17,6 +17,26 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
         }
 
+		/* Hide the sidebar on small screens (less than 768px) */
+		@media only screen and (max-width: 768px) {
+			.sidebar {
+				display: none;
+			}
+			#pagecontainer {
+				margin-left: auto;
+			}
+		}
+
+		/* Show the sidebar on larger screens (768px and above) */
+		@media only screen and (min-width: 768px) {
+			.sidebar {
+				display: block;
+			}
+			#pagecontainer {
+				margin-left: 150px; /* Leave space for the fixed sidebar */
+			}
+		}
+
         .sidebar {
             position: fixed; /* Fixes the sidebar */
 			height: 100vh;
@@ -29,9 +49,8 @@
 
         #pagecontainer {
             display: flex; /* Flexbox for sidebar and content */
-            margin-left: 150px; /* Leave space for the fixed sidebar */
             padding-top: 20px; /* Leave space for the fixed header */
-			flex-wrap: wrap;
+			
         }
 		
 		/* Content in the main section */
@@ -40,7 +59,7 @@
         }
 		
 		#contactbox{
-			min-width: 280px;
+			min-width: 335px;
 			max-width: 340px;
 			margin: 10px;
 		}
@@ -68,7 +87,7 @@
 				<img src="./imgs/handsome.png" alt="An Image of Me" width="88%" style="padding: 10px;"/>
 			</nav>
 		</div>
-		<div class="window-body" role="tabpanel" style="flex-grow: 1; margin-left: 20px; overflow-y: scroll; height: 99vh;">
+		<div class="window-body" role="tabpanel" style="flex-grow: 1; margin-left: 20px; overflow-y: scroll; height: 97vh;">
 			<!-- Tablist -->
 			<menu role="tablist">
 				<li role="tab"><a href="index.html">About</a></li>
@@ -79,7 +98,7 @@
 			<div class="window" style="flex-grow: 1; height: 92vh;>
 				<div class="window-body">
 					<!-- Contact Boxes -->
-					<div class="container" style="flex-grow: 1;">
+					<div class="container" style="flex-grow: 1; padding: 30px 50px; flex-wrap: wrap;">
 					
 						<!-- Email Box -->
 						<div id="contactbox" class="window" style="width: 100%;">
@@ -89,7 +108,7 @@
 							<div class="window-body">
 								<p>Can contact me through my email at:</p>
 								<p></p>
-								<p>eppuki@gmail.com</p>
+								<p class="normal-text">eppuki@gmail.com</p>
 							</div>
 						</div>
 						

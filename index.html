@@ -17,6 +17,26 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
         }
 
+		/* Hide the sidebar on small screens (less than 768px) */
+		@media only screen and (max-width: 768px) {
+			.sidebar {
+				display: none;
+			}
+			#pagecontainer {
+				margin-left: auto;
+			}
+		}
+
+		/* Show the sidebar on larger screens (768px and above) */
+		@media only screen and (min-width: 768px) {
+			.sidebar {
+				display: block;
+			}
+			#pagecontainer {
+				margin-left: 150px;
+			}
+		}
+		
         .sidebar {
             position: fixed; /* Fixes the sidebar */
 			height: 100vh;
@@ -27,9 +47,8 @@
             overflow-y: auto; /* Allows scrolling within the sidebar if content overflows */
         }
 
-        .container {
+        #pagecontainer {
             display: flex; /* Flexbox for sidebar and content */
-            margin-left: 150px; /* Leave space for the fixed sidebar (200px + 20px for padding) */
             padding-top: 20px; /* Leave space for the fixed header */
         }
 
@@ -48,21 +67,20 @@
 		</div>
 	</div>
 	
-	<div class="container" style="flex-grow: 1;">
+	<div id="pagecontainer" class="container" style="flex-grow: 1;">
 		<!-- Sidebar -->
 		<div class="sidebar" style="width: 165px;">
 			<nav>
 				<img src="./imgs/handsome.png" alt="Description of image" width="88%" style="padding: 10px;"/>
 				<ul class="tree-view" id="sidebar-menu">
-					<li><button class="button" style="text-align: left;" onclick="location.href='#about'">About Me</a></li>
-					<li><button class="button" style="text-align: left;" onclick="location.href='#experience'">Work Experience</a></li>
-					<li><button class="button" style="text-align: left;" onclick="location.href='#projects'">Projects</a></li>
-					<li><button class="button" style="text-align: left;" onclick="location.href='#contact'">Contact</a></li>
+					<li><button class="button" style="text-align: left; padding: 10px 20px 10px 20px;" onclick="location.href='#about'">About Me</a></li>
+					<li><button class="button" style="text-align: left; padding: 10px 20px 10px 20px;" onclick="location.href='#experience'">Work Experience</a></li>
+					<li><button class="button" style="text-align: left; padding: 10px 20px 10px 20px;" onclick="location.href='#projects'">Projects</a></li>
 				</ul>
 			</nav>
 		</div>
 		
-		<div class="window-body" role="tabpanel" style="flex-grow: 1; margin-left: 20px; overflow-y: scroll; height: 98vh;">
+		<div class="window-body" role="tabpanel" style="flex-grow: 1; margin-left: 20px; overflow-y: scroll; height: 97vh;">
 			<!-- Tablist -->
 			<menu role="tablist">
 				<li id="about" role="tab" aria-selected="true"><a href="#about">About</a></li>
@@ -70,11 +88,12 @@
 				<li role="tab"><a href="#tabs">Resume</a></li>
 			</menu>
 			<div class="window">
-				<div class="window-body">
+				<div class="container" style="word-break: break-word;">
 					<!-- Main Content -->
-					<div class="content">
-						<h1>About Me</h1>
-						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
+					<div class="content" style="padding:0px 20px 0px 20px;">
+						<h1>Hi, I'm Emil Kilpeläinen.</h1>
+						<p>I'm a 23-year-old, recently graduated with a degree in Information and Communication Technology, focusing on game development. I'm a quick learner and a self-starter, always looking for new things to dive into and improve my skills upon.</p>
+						<p>I'm fluent in both Finnish and English, allowing me to communicate effectively in different settings.</p>
 						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
 						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
 						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
@@ -128,6 +147,15 @@
 							<p>How people can reach you.</p>
 							<p>How people can reach you.</p>
 						</section>
+					</div>
+					<div class="content" style="padding:0px 10px 0px 20px; word-break: break-word;">
+						<h1>Hi, I'm Emil Kilpeläinen.</h1>
+						<p>I'm a 23-year-old, recently graduated with a degree in Information and Communication Technology, focusing on game development. I'm a quick learner and a self-starter, always looking for new things to dive into and improve my skills upon.</p>
+						<p>I'm fluent in both Finnish and English, allowing me to communicate effectively in different settings.</p>
+						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
+						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
+						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
+						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. bla bla bla </p>
 					</div>
 				</div>
 			</div>
