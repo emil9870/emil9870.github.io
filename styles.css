@@ -83,25 +83,22 @@
 
 @font-face {
   font-family: "MS Sans Serif", sans-serif;
-  src: url("fonts/converted/ms_sans_serif.woff") format("woff");
-  src: url("fonts/converted/ms_sans_serif.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "MS Sans Serif", sans-serif;
-  src: url("fonts/converted/ms_sans_serif_bold.woff") format("woff");
-  src: url("fonts/converted/ms_sans_serif_bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
 
 html {
-	scroll-padding-top: 80px;
+	scroll-padding-top: 500px;
 }
 
 body {
+  margin: 0;
   font-family: Arial;
   font-size: 12px;
   color: var(--text-color);
@@ -232,6 +229,10 @@ input[type="reset"]:disabled,
 }
 
 .title-bar {
+  /*background-image: url('./imgs/cds.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;*/
   background: linear-gradient(
     90deg,
     var(--dialog-blue),
@@ -701,19 +702,21 @@ a:focus {
 
 ul.tree-view {
   display: block;
-  background: var(--button-highlight);
-  box-shadow: var(--border-field);
-  padding: 6px;
+  background: transparent;
+  box-shadow: transparent;
+  padding: 10px;
   margin: 0;
 }
 
 ul.tree-view li {
   list-style-type: none;
+  padding: 8px;
 }
 
 ul.tree-view a {
   text-decoration: none;
-  color: #000;
+  font-weight: 700;
+  color: black;
 }
 
 ul.tree-view a:focus {
@@ -891,6 +894,7 @@ menu[role=tablist] > li > a {
   display: block;
   color: #222;
   margin: 10px;
+  font-weight: bold; /* Use font-weight to make text bold */
   text-decoration: none;
 }
 menu[role=tablist] > li[aria-selected=true] > a:focus {
@@ -978,13 +982,25 @@ table > tbody > tr > * {
 
 .container {
     display: flex; /* Use flexbox for sidebar and content */
-	background-color: lightblue;
+	/*background-color: white;*/
+	/*background-image: url('./imgs/cds_2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
 }
 
 .sidebar {
     width: 200px; /* Adjust width of sidebar */
     /* Optional styling for the sidebar */
-    background-color: #f0f0f0; /* Light gray background */
+	background-image: url('./imgs/cds.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    /*background: linear-gradient(
+    135deg,
+    var(--dialog-blue),
+    var(--dialog-blue-light)
+	);*/
     padding: 35px 5px; /* Add padding */
     box-shadow: none; /*2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
 	box-sizing: border-box;
@@ -996,7 +1012,7 @@ table > tbody > tr > * {
 	display: block;
 	padding: 5px 0;
 	text-decoration: none;
-	color: #000;
+	color: white;
 }
 
 .sidebar li {

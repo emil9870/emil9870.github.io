@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 	<style>
-		body {
-			margin: 0;
-			font-family: sans-serif, Arial;
-		}
-		
 		.title-bar {
             position: fixed; /* Fixes the header to the top */
             top: 0;
@@ -57,13 +52,14 @@
 		<!-- Sidebar -->
 		<div class="sidebar" style="width: 165px;">
 			<nav>
-				<ul id="sidebar-menu">
-					<li><a href="#about">About Me</a></li>
-					<li><a href="#contact">Contact</a></li>
+				<img src="./imgs/handsome.png" alt="Description of image" width="88%" style="padding: 10px;"/>
+				<ul class="tree-view" id="sidebar-menu">
+					<li><button class="button" style="text-align: left;" onclick="location.href='#about'">About Me</a></li>
+					<li><button class="button" style="text-align: left;" onclick="location.href='#contact'">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
-		<div class="window-body" role="tabpanel" style="flex-grow: 1; margin-left: 20px; overflow: auto; height: 99vh;">
+		<div class="window-body" role="tabpanel" style="flex-grow: 1; margin-left: 20px; overflow-y: scroll; height: 99vh;">
 			<!-- Tablist -->
 			<menu role="tablist">
 				<li role="tab"><a href="index.html">About</a></li>

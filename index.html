@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 	<style>
-		body {
-			margin: 0;
-			font-family: sans-serif, Arial;
-		}
-		
 		.title-bar {
             position: fixed; /* Fixes the header to the top */
             top: 0;
@@ -57,19 +52,20 @@
 		<!-- Sidebar -->
 		<div class="sidebar" style="width: 165px;">
 			<nav>
-				<ul id="sidebar-menu">
-					<li><a href="#about">About Me</a></li>
-					<li><a href="#experience">Work Experience</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#contact">Contact</a></li>
+				<img src="./imgs/handsome.png" alt="Description of image" width="88%" style="padding: 10px;"/>
+				<ul class="tree-view" id="sidebar-menu">
+					<li><button class="button" style="text-align: left;" onclick="location.href='#about'">About Me</a></li>
+					<li><button class="button" style="text-align: left;" onclick="location.href='#experience'">Work Experience</a></li>
+					<li><button class="button" style="text-align: left;" onclick="location.href='#projects'">Projects</a></li>
+					<li><button class="button" style="text-align: left;" onclick="location.href='#contact'">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
 		
-		<div class="window-body" role="tabpanel" style="flex-grow: 1; margin-left: 20px; overflow-y: scroll; height: 99vh;">
+		<div class="window-body" role="tabpanel" style="flex-grow: 1; margin-left: 20px; overflow-y: scroll; height: 98vh;">
 			<!-- Tablist -->
 			<menu role="tablist">
-				<li role="tab" aria-selected="true"><a href="#tabs">About</a></li>
+				<li id="about" role="tab" aria-selected="true"><a href="#about">About</a></li>
 				<li role="tab"><a href="contact.html">Contact</a></li>
 				<li role="tab"><a href="#tabs">Resume</a></li>
 			</menu>
@@ -77,14 +73,12 @@
 				<div class="window-body">
 					<!-- Main Content -->
 					<div class="content">
-						<section id="about">
-							<h1>About Me</h1>
-							<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
-							<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
-							<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
-							<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
-							<p>23-year-old software engineer with experience in Front-End and Back-End technologies. bla bla bla </p>
-						</section>
+						<h1>About Me</h1>
+						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
+						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
+						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
+						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
+						<p>23-year-old software engineer with experience in Front-End and Back-End technologies. bla bla bla </p>
 
 						<section id="experience">
 							<h1>Work Experience</h1>
