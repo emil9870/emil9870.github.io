@@ -1,6 +1,3 @@
-var cursor = document.querySelector('.cursor');
-var cursorinner = document.querySelector('.cursor2');
-
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".sidebar-link");
