@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/all.min.css">
 	<style>
 		#top-title {
             position: fixed; /* Fixes the header to the top */
@@ -27,15 +27,28 @@
             overflow-y: auto; /* Allows scrolling within the sidebar if content overflows */
         }
 
-        .container {
+        #pagecontainer {
             display: flex; /* Flexbox for sidebar and content */
-            margin-left: 150px; /* Leave space for the fixed sidebar (200px + 20px for padding) */
+            margin-left: 150px; /* Leave space for the fixed sidebar */
             padding-top: 20px; /* Leave space for the fixed header */
+			flex-wrap: wrap;
         }
-
+		
+		/* Content in the main section */
         .window-body {
-            flex-grow: 1; /* Allow main content to take remaining space */
+            flex-grow: 1;
         }
+		
+		#contactbox{
+			min-width: 280px;
+			max-width: 340px;
+			margin: 10px;
+		}
+		
+		.normal-text {
+			font-family: "MS Sans Serif", sans-serif, Arial;
+			font-weight: 700;
+		}
     </style>
 </head>
 <body>
@@ -48,7 +61,7 @@
 		</div>
 	</div>
 
-	<div class="container" style="flex-grow: 1;">
+	<div id="pagecontainer" class="container" style="flex-grow: 1;">
 		<!-- Sidebar -->
 		<div class="sidebar" style="width: 165px;">
 			<nav>
@@ -62,30 +75,34 @@
 				<li role="tab" aria-selected="true"><a href="contact.html">Contact</a></li>
 				<li role="tab"><a href="#tabs">Resume</a></li>
 			</menu>
+			<!-- Main Page -->
 			<div class="window" style="flex-grow: 1; height: 92vh;>
 				<div class="window-body">
 					<!-- Contact Boxes -->
 					<div class="container" style="flex-grow: 1;">
-						<div class="window" style="width: 320px;">
-							<div class="title-bar" style="margin-left: -28px; width: 107.2%;">
+					
+						<!-- Email Box -->
+						<div id="contactbox" class="window" style="width: 100%;">
+							<div class="title-bar" style="width: 98%;">
 								<div class="title-bar-text">✉️ Email</div>
-								<div class="title-bar-controls">
-									<button aria-label="Help"></button>
-								</div>
 							</div>
 							<div class="window-body">
+								<p>Can contact me through my email at:</p>
+								<p></p>
 								<p>eppuki@gmail.com</p>
 							</div>
 						</div>
-						<div class="window" style="width: 320px; margin-left: 50px;">
-							<div class="title-bar" style="margin-left: -28px; width: 107.2%;">
+						
+						<!-- Social Medias Box -->
+						<div id="contactbox" class="window" style="width: 100%;">
+							<div class="title-bar" style="width: 98%;">
 								<div class="title-bar-text">📙 Social Medias</div>
-								<div class="title-bar-controls">
-									<button aria-label="Help"></button>
-								</div>
 							</div>
 							<div class="window-body">
-								<p>yeah yeah later!</p>
+								<a href="https://linkedin.com/in/emil-kilpel%C3%A4inen" target="_blank" class="fab fa-linkedin fa-3x"></a>
+								<a href="https://github.com/emil9870" target="_blank" class="fab fa-github fa-3x"></a>
+								<p></p>
+								<p> <i class="fab fa-discord"></i> <span class="normal-text">Discord: beautaeful</span></p>
 							</div>
 						</div>
 					</div>
