@@ -224,7 +224,7 @@ input[type="reset"]:disabled,
 .window {
   box-shadow: var(--border-window-outer), var(--border-window-inner);
   background: var(--surface);
-  min-height: 92vh;
+  min-height: 18vh;
   padding: 3px 0 0 30px;
 }
 

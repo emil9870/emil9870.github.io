@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 	<style>
-		.title-bar {
+		#top-title {
             position: fixed; /* Fixes the header to the top */
             top: 0;
             left: 0;
@@ -40,7 +40,7 @@
 </head>
 <body>
 	<!-- Header -->
-	<div class="title-bar">
+	<div id="top-title" class="title-bar">
 		<div class="title-bar-text">Contact</div>
 		<div class="title-bar-controls">
 			<button aria-label="Help"></button>
@@ -52,37 +52,42 @@
 		<!-- Sidebar -->
 		<div class="sidebar" style="width: 165px;">
 			<nav>
-				<img src="./imgs/handsome.png" alt="Description of image" width="88%" style="padding: 10px;"/>
-				<ul class="tree-view" id="sidebar-menu">
-					<li><button class="button" style="text-align: left;" onclick="location.href='#about'">About Me</a></li>
-					<li><button class="button" style="text-align: left;" onclick="location.href='#contact'">Contact</a></li>
-				</ul>
+				<img src="./imgs/handsome.png" alt="An Image of Me" width="88%" style="padding: 10px;"/>
 			</nav>
 		</div>
 		<div class="window-body" role="tabpanel" style="flex-grow: 1; margin-left: 20px; overflow-y: scroll; height: 99vh;">
 			<!-- Tablist -->
 			<menu role="tablist">
-				<li role="tab"><a href="/">About</a></li>
+				<li role="tab"><a href="index.html">About</a></li>
 				<li role="tab" aria-selected="true"><a href="contact.html">Contact</a></li>
 				<li role="tab"><a href="#tabs">Resume</a></li>
 			</menu>
-			<div class="window">
+			<div class="window" style="flex-grow: 1; height: 92vh;>
 				<div class="window-body">
-					<!-- Main Content -->
-					<div class="content">
-						<section id="about">
-							<h1>About Me</h1>
-							<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
-							<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
-							<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
-							<p>23-year-old software engineer with experience in Front-End and Back-End technologies. </p>
-							<p>23-year-old software engineer with experience in Front-End and Back-End technologies. bla bla bla </p>
-						</section>
-
-						<section id="contact">
-							<h1>Contact</h1>
-							<p>How people can reach you.</p>
-						</section>
+					<!-- Contact Boxes -->
+					<div class="container" style="flex-grow: 1;">
+						<div class="window" style="width: 320px;">
+							<div class="title-bar" style="margin-left: -28px; width: 107.2%;">
+								<div class="title-bar-text">✉️ Email</div>
+								<div class="title-bar-controls">
+									<button aria-label="Help"></button>
+								</div>
+							</div>
+							<div class="window-body">
+								<p>eppuki@gmail.com</p>
+							</div>
+						</div>
+						<div class="window" style="width: 320px; margin-left: 50px;">
+							<div class="title-bar" style="margin-left: -28px; width: 107.2%;">
+								<div class="title-bar-text">📙 Social Medias</div>
+								<div class="title-bar-controls">
+									<button aria-label="Help"></button>
+								</div>
+							</div>
+							<div class="window-body">
+								<p>yeah yeah later!</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
