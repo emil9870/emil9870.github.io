@@ -124,19 +124,19 @@ li[role=tab] {
 }
 
 h1 {
-  font-size: 3rem;
-}
-
-h2 {
   font-size: 2.5rem;
 }
 
-h3 {
+h2 {
   font-size: 2rem;
 }
 
-h4 {
+h3 {
   font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
 }
 
 u {
@@ -920,7 +920,7 @@ table {
   border-collapse: collapse;
   position: relative;
   text-align: left;
-  white-space: nowrap;
+  white-space: break-spaces;
   background-color: #fff;
 }
 
@@ -1018,4 +1018,8 @@ table > tbody > tr > * {
 
 .sidebar li {
 	margin-bottom: 10px;
+}
+
+section {
+    margin-bottom: 80px; /* Adds space between sections */
 }
