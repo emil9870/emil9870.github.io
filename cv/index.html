@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emil's Portfolio</title>
 	<!-- win 98 styling -->
-    <link rel="stylesheet" href="./css/styles3.css">
+    <link rel="stylesheet" href="/css/styles3.css">
 	<!-- Font Awesome 6 icons? -->
-	<link rel="stylesheet" href="./css/all.min.css">
+	<link rel="stylesheet" href="/css/all.min.css">
     <script defer src="script.js"></script>
 	<style>
         html, body {
@@ -132,9 +132,9 @@
 
     <!-- Tab Bar -->
     <menu role="tablist">
-        <li role="tab" aria-selected="true" data-tab="about"><a href="/">About</a></li>
+        <li role="tab" data-tab="about"><a href="/">About</a></li>
         <li role="tab" data-tab="projects"><a href="/projects/">Projects</a></li>
-        <li role="tab" data-tab="resume"><a href="/cv/">Resume</a></li>
+        <li role="tab" aria-selected="true" data-tab="resume"><a href="/cv/">Resume</a></li>
         <li role="tab" data-tab="contact"><a href="/contact/">Contact</a></li>
     </menu>
 
@@ -144,7 +144,7 @@
 		<div class="sidebar">
 			<!-- Profile picture (circle like in your image) -->
 			<div style="text-align:center; margin-bottom:16px;">
-				<img src="./imgs/handsome.png" alt="Emil Kilpeläinen" 
+				<img src="/imgs/handsome.png" alt="Emil Kilpeläinen" 
 					style="width:130px; height:134px; border-radius:50%; object-fit:cover; border:4px solid #000c42; box-shadow:0 0 10px rgba(0, 0, 0, 0.5);">
 			</div>
 
@@ -190,38 +190,67 @@
                 <!-- Main Content -->
                 <div class="content" style="padding:0px 20px 0px 20px; border-right: 1px solid black; flex: 1;">
                     <section>
-                        <h1><i class="fa-solid fa-code" style="margin-right: 8px;"></i>Hello! I'm Emil Kilpeläinen</h1>
-                        <p>I'm a 25-year-old, game programmer with a bachelor's in game development. While programming is my main interest, I'm passionate about a wide range of creative works, from concept arts to video editing, world designing, and language study.</p>
+                        <h1 style="text-decoration:underline; text-decoration-thickness: 4px;">Hi, I'm Emil Kilpeläinen.</h1>
+                        <p>I'm a 25-year-old, recent graduate with a Bachelor's degree in Game Programming.
+                        As a quick learner and a self-starter, I'm always looking for new opportunities to improve my abilities.</p>
+                        <p>While programming is my forte, I'm passionate about a wide range of creative works, from concept arts to video editing, world designing, and language study.</p>
                         <p>I've studied in Finland and Sweden, and am fluent in Finnish and English, but also understand Swedish well, allowing me to communicate effectively in any team setting.</p>
-                        <p style="font-size: 18px; margin-top: 34px; padding: 10px;">I'm currently developing <a href="/portfolio/pc/#project2">a new game</a>, but feel free to explore <a href="/projects/">my projects</a> or check out <a href="/cv/">my resume</a>.</p>
+                    </section>
+
+                    <section id="education">
+                        <h2>Education</h2>
+                        <div class="content" style="background:rgba(0,0,0,0.1); padding: 0px 5px 3px 3px;">
+                            <p><b>Basic Education</b><br>Språkskolan, Haparanda.</p>
+                        </div>
+                        <div class="content" style="background:rgba(0,0,0,0.1); padding: 0px 5px 3px 3px;">
+                            <p><b>Computer Science / IT</b><br>Lappia Vocational College, Tornio.<br>(Achieved 2019)</p>
+                            <p></p>
+                            <p>In Computer Science, I got to learn about a lot of different things with computers.
+                            It covered hardware, components, and how computers run with the components.
+                            I also got to do some programming and learned more on coding languages.
+                            We spent time working with servers, networks, and how to manage them and their databases.
+                            I got to use tools like Adobe software—Photoshop, Lightroom, and Premiere Pro—as well as other tools, like GIMP and Sony Vegas Pro.
+                            In my final year there, I set up a VR device into a classroom and got to run research on the equipment and figure out how it was built and worked.</p>
+                        </div>
+                        <div class="content" style="background:rgba(0,0,0,0.1); padding: 0px 5px 3px 3px;">
+                            <p><b>Bachelor's Degree in Business Information Technology,
+                            Game Programming.</b><br>University of Applied Sciences, Kajaani.<br>(Achieved 2024)</p>
+                            <p></p>
+                            <p>Bachelor studies in Business Information Technology with the focus in game programming.<br>
+                            I'll leave the projects, incl. screenshots, in the <a href="#projects">last section</a>.<br> I developed games for PC, Android, iOS, and VR.
+                            Worked on game graphics using Blender and Photoshop. Also handled audio and music work for some of our game projects,
+                            and I had the opportunity in school to work as a game designer on projects.<br> I've written Game Design Documents (GDDs) and Technical Design Documents (TDDs). I worked on UI/UX in both video-games and websites.</p>
+                            <p>Game development in school included C++ and C#, along with game-engines Unreal Engine and Unity.<br>
+                            Beside my main studies I wrote a presentation on memory editing, took an extra course on social media analysation that specified into youtubing, and for <a href="https://urn.fi/URN:NBN:fi:amk-2024052917349" target="_blank">my thesis</a> work,
+                            I reverse-engineered an online game and recreated a server for it.</p>
+                        </div>
+                    </section>
+
+                    <section id="skills">
+                        <h2>Skills & Experiences</h2>
+                        <h3>Programming Languages</h3>
+                        <p>C# C++ PYTHON JAVA HTML CSS JAVASCRIPT PYTHON VERSE</p>
+                        <p></p>
+                        <h3>Tools</h3>
+                        <p>SQL VS CODE Git GitHub UE UEFN Unity Photoshop Lightroom Excel Word Vegas Pro Linux Android iOS</p>
+                        <p></p>
+                        <h3>Languages (in order of strength)</h3>
+                        <ul>
+                            <li>Finnish</li>
+                            <li>English</li>
+                            <li>Swedish</li>
+                        </ul>
+                        <p></p>
+                        <p>Elementary knowledge in the following:</p>
+                        <ul>
+                            <li>German</li>
+                            <li>Korean</li>
+                        </ul>
                     </section>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!--
-<script>
-    // Simple tab switching (pure JS, no dependencies)
-    function showTab(tabId) {
-        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-        document.getElementById(tabId).classList.add('active');
-
-        document.querySelectorAll('[role="tab"]').forEach(t => {
-            t.setAttribute('aria-selected', t.getAttribute('data-tab') === tabId);
-        });
-    }
-
-    // Also make the top tabs work
-    document.querySelectorAll('[role="tab"]').forEach(tab => {
-        tab.addEventListener('click', (e) => {
-            //e.preventDefault();
-            const id = tab.getAttribute('data-tab');
-            showTab(id);
-        });
-    });
-</script>
--->
-
 </body>
 </html>

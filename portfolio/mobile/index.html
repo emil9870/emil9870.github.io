@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emil's Portfolio</title>
 	<!-- win 98 styling -->
-    <link rel="stylesheet" href="./css/styles3.css">
+    <link rel="stylesheet" href="/css/styles3.css">
 	<!-- Font Awesome 6 icons? -->
-	<link rel="stylesheet" href="./css/all.min.css">
+	<link rel="stylesheet" href="/css/all.min.css">
     <script defer src="script.js"></script>
 	<style>
         html, body {
@@ -72,7 +72,7 @@
             z-index: 10;
         }
 
-        /* sidebar + tab panel */
+        /* Main content area = sidebar + tab panel */
         .window-body {
             flex: 1;
             display: flex;
@@ -116,6 +116,81 @@
         .tab-panel.active {
             display: block;
         }
+
+        @media (max-width: 1100px) {
+        .win98-window { width: 98vw; height: 94vh; }
+        .window > div { padding: 20px !important; }
+        .window h2 { font-size: 22px; }
+        }
+
+        .projects-container {
+            padding: 20px 60px;
+            max-width: 1000px; /* Wider than categories for side-by-side */
+            margin: 0 auto;
+        }
+
+        .project-section {
+            margin-bottom: 30px; /* Space between sections, like reference */
+            display: flex;
+            align-items: center; /* Vertical center for text/media alignment */
+            gap: 60px; /* Horizontal space between text and media */
+        }
+
+        .project-section:nth-child(even) {
+            flex-direction: row-reverse; /* Alternate: even sections flip media to left */
+        }
+
+        .project-text {
+            flex: 1;
+            padding: 10px 0; /* Subtle internal breathing */
+        }
+
+        .project-text h2 {
+            margin: 0 0 15px 0;
+            font-size: 28px;
+            color: #008080; /* Teal like your categories */
+            line-height: 1.2;
+        }
+
+        .project-text p {
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .project-media {
+            flex: 1;
+            max-width: 400px; /* Caps media width for balance */
+        }
+
+        .project-media img,
+        .project-media video {
+            width: 100%;
+            height: 250px; /* Fixed height like reference thumbs; adjust if needed */
+            object-fit: cover; /* Crops nicely, no distortion */
+            border-radius: 8px; /* Soft corners for modern feel */
+            display: block;
+        }
+
+        /* Mobile stack: Everything vertical below 768px */
+        @media (max-width: 768px) {
+            .project-section {
+                flex-direction: column !important; /* Force stack, ignore alternation */
+                gap: 20px;
+                text-align: center;
+            }
+            .project-media {
+                max-width: 100%;
+                order: 2; /* Media always below on mobile */
+            }
+            .project-text {
+                order: 1;
+            }
+            .projects-container {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -132,7 +207,7 @@
 
     <!-- Tab Bar -->
     <menu role="tablist">
-        <li role="tab" aria-selected="true" data-tab="about"><a href="/">About</a></li>
+        <li role="tab" data-tab="about"><a href="/">About</a></li>
         <li role="tab" data-tab="projects"><a href="/projects/">Projects</a></li>
         <li role="tab" data-tab="resume"><a href="/cv/">Resume</a></li>
         <li role="tab" data-tab="contact"><a href="/contact/">Contact</a></li>
@@ -144,11 +219,11 @@
 		<div class="sidebar">
 			<!-- Profile picture (circle like in your image) -->
 			<div style="text-align:center; margin-bottom:16px;">
-				<img src="./imgs/handsome.png" alt="Emil Kilpeläinen" 
+				<img src="/imgs/handsome.png" alt="Emil Kilpeläinen" 
 					style="width:130px; height:134px; border-radius:50%; object-fit:cover; border:4px solid #000c42; box-shadow:0 0 10px rgba(0, 0, 0, 0.5);">
 			</div>
 
-            <div style="background:#c0c0c0e3; padding: 15px 0px 15px 0px">
+			<div style="background:#c0c0c0e3; padding: 15px 0px 15px 0px">
                 <div style="padding:0 12px; text-align:left;">
                     <h3 style="margin:0 0 8px 0; font-size:18px;">EMIL KILPELÄINEN</h3>
                     <p style="margin:0 0 16px 0; font-size:13px; line-height:1.4;">
@@ -185,43 +260,34 @@
 		</div>
 
         <!-- Tab Panels -->
-        <div id="about" class="window">
-            <div class="container" style="word-break: break-word;">
-                <!-- Main Content -->
-                <div class="content" style="padding:0px 20px 0px 20px; border-right: 1px solid black; flex: 1;">
-                    <section>
-                        <h1><i class="fa-solid fa-code" style="margin-right: 8px;"></i>Hello! I'm Emil Kilpeläinen</h1>
-                        <p>I'm a 25-year-old, game programmer with a bachelor's in game development. While programming is my main interest, I'm passionate about a wide range of creative works, from concept arts to video editing, world designing, and language study.</p>
-                        <p>I've studied in Finland and Sweden, and am fluent in Finnish and English, but also understand Swedish well, allowing me to communicate effectively in any team setting.</p>
-                        <p style="font-size: 18px; margin-top: 34px; padding: 10px;">I'm currently developing <a href="/portfolio/pc/#project2">a new game</a>, but feel free to explore <a href="/projects/">my projects</a> or check out <a href="/cv/">my resume</a>.</p>
-                    </section>
+        <div id="projects" class="window">
+            <div class="projects-container">
+                <!-- Project 1: Media on RIGHT (default flex) -->
+                <div class="project-section">
+                    <div class="project-text">
+                        <h2>Spear throwing game</h2>
+                        <p>Done in 3 person group, for toilet scenarios where you want to race your friends for a highscore. Similar playstyle to 'Angry Birds' -games.</p>
+                    </div>
+                    <div class="project-media">
+                        <img src="/imgs/spearthrow1.png" alt="Spear Throwing Project thumbnail1" style="height: auto; border-radius: 35px; padding: 30px;">
+                        <!-- Or for video: <video src="/videos/project1.mp4" controls></video> -->
+                    </div>
+                </div>
+
+                <!-- Project 2: Media on LEFT (row-reverse) -->
+                <div class="project-section">
+                    <div class="project-text">
+                        <h2>Integrations</h2>
+                        <p>We implemented multiple integrations: Unity Ads, Unity Analytics, in-game store purchases, a binary-formatted user save data file (for storing playtime and offline records), and a Google SDK-based leaderboard.</p>
+                    </div>
+                    <div class="project-media">
+                        <img src="/imgs/spearthrow2.png" alt="Spear Throwing Project thumbnail1" style="height: auto; border-radius: 35px; padding: 30px;">
+                        <!-- Or img: <img src="/imgs/project2-thumb.jpg" alt="Project 2 thumbnail"> -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!--
-<script>
-    // Simple tab switching (pure JS, no dependencies)
-    function showTab(tabId) {
-        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-        document.getElementById(tabId).classList.add('active');
-
-        document.querySelectorAll('[role="tab"]').forEach(t => {
-            t.setAttribute('aria-selected', t.getAttribute('data-tab') === tabId);
-        });
-    }
-
-    // Also make the top tabs work
-    document.querySelectorAll('[role="tab"]').forEach(tab => {
-        tab.addEventListener('click', (e) => {
-            //e.preventDefault();
-            const id = tab.getAttribute('data-tab');
-            showTab(id);
-        });
-    });
-</script>
--->
-
 </body>
 </html>
