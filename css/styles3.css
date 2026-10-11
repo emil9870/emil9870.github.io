@@ -244,6 +244,10 @@ input[type="reset"]:disabled,
   align-items: center;
 }
 
+.win98-window > .title-bar {
+  margin: 3px 3px 0;
+}
+
 .title-bar.inactive {
   background: linear-gradient(
     90deg,

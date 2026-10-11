@@ -1,0 +1,114 @@
+#projects {
+    min-width: 0;
+}
+
+.category-list {
+    display: grid;
+    gap: 18px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.category-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-height: 108px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: var(--surface);
+    box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.category-icon {
+    flex: 0 0 44px;
+    margin-top: 3px;
+    color: #008080;
+    font-size: 36px;
+    text-align: center;
+}
+
+.category-copy {
+    min-width: 0;
+}
+
+.category-copy h2 {
+    margin: 0 0 8px;
+    color: #008080;
+    font-size: 24px;
+    overflow-wrap: break-word;
+}
+
+.category-copy p {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (hover: hover) {
+    .category-card:hover {
+        background: var(--button-face);
+    }
+}
+
+.category-card:focus-visible {
+    outline: 2px dotted #000080;
+    outline-offset: -6px;
+}
+
+.category-card:active {
+    box-shadow: var(--border-sunken-outer), var(--border-sunken-inner);
+}
+
+.category-card:active > * {
+    transform: translate(1px, 1px);
+}
+
+@media (max-width: 600px) {
+    .win98-window .window-body {
+        display: block;
+        overflow-y: auto;
+    }
+
+    .win98-window .sidebar {
+        display: flex;
+        gap: 12px;
+        width: auto;
+        border-right: 0;
+        border-bottom: 2px groove #fff;
+    }
+
+    .sidebar > div:first-child {
+        flex: 0 0 76px;
+    }
+
+    .sidebar > div:first-child img {
+        width: 68px !important;
+        height: auto !important;
+    }
+
+    #projects {
+        overflow: visible;
+    }
+}
+
+@media (max-width: 400px) {
+    .window > .category-list {
+        padding: 16px !important;
+    }
+
+    .category-card {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .category-copy h2 {
+        font-size: 20px;
+    }
+}

@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="/css/styles3.css">
 	<!-- Font Awesome 6 icons? -->
 	<link rel="stylesheet" href="/css/all.min.css">
-    <script defer src="script.js"></script>
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="categories.css">
 	<style>
         html, body {
             height: 100%;
             margin: 0;
-            background: rgb(255, 255, 255);
+            background: #008080;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -129,7 +130,7 @@
 <div class="win98-window">
     <!-- Title Bar -->
     <div class="title-bar">
-        <div class="title-bar-text">Portfolio v0.7 - Emil Kilpeläinen</div>
+        <div class="title-bar-text">Portfolio v0.8 - Emil Kilpeläinen</div>
         <div class="title-bar-controls">
             <button aria-label="Help"></button>
             <button aria-label="Close"></button>
@@ -192,62 +193,52 @@
 
         <!-- Tab Panels -->
         <div id="projects" class="window">
-            <div style="padding: 30px; max-width: 900px; margin: 0 auto;">
+            <div class="category-list">
                 
                 <!-- PC games -->
-                <div style="margin-bottom: 22px; display: flex; align-items: flex-start; gap: 15px; background:#00000015; padding: 15px; flex-wrap: wrap;">
-                    <a href="/portfolio/pc/" style="display:block; padding:2px 5px 2px 2px; color:#008080; text-decoration:underline;"><i class="fa-solid fa-gamepad fa-fw" style="font-size: 36px; color: #008080; margin-top: 4px;"></i></a>
-                    <div>
-                        <a href="/portfolio/pc/" style="display:block; padding:2px 5px 2px 2px; color:#008080; text-decoration:underline;"><h2 style="margin: 0 0 10px 0; color: #008080; font-size: 24px;">PC games</h2></a>
-                        <p style="margin: 0; line-height: 1.5; color: #333;">
-                            I'm currently working on a game to be released.
-                        </p>
+                <a class="category-card" href="/portfolio/pc/">
+                    <i class="fa-solid fa-gamepad fa-fw category-icon" aria-hidden="true"></i>
+                    <div class="category-copy">
+                        <h2>PC games</h2>
+                        <p>I'm currently working on a game to be released.</p>
                     </div>
-                </div>
+                </a>
 
                 <!-- Mobile games -->
-                <div style="margin-bottom: 22px; display: flex; align-items: flex-start; gap: 15px; background:#00000015; padding: 15px; flex-wrap: wrap;">
-                    <a href="/portfolio/mobile/" style="display:block; padding:2px 5px 2px 2px; color:#008080; text-decoration:underline;"><i class="fa-solid fa-mobile-alt fa-fw" style="font-size: 36px; color: #008080; margin-top: 4px;"></i></a>
-                    <div>
-                        <a href="/portfolio/mobile/" style="display:block; padding:2px 5px 2px 2px; color:#008080; text-decoration:underline;"><h2 style="margin: 0 0 10px 0; color: #008080; font-size: 24px;">Mobile games</h2></a>
-                        <p style="margin: 0; line-height: 1.5; color: #333;">
-                            I have developed (casual) mobile games.
-                        </p>
+                <a class="category-card" href="/portfolio/mobile/">
+                    <i class="fa-solid fa-mobile-alt fa-fw category-icon" aria-hidden="true"></i>
+                    <div class="category-copy">
+                        <h2>Mobile games</h2>
+                        <p>I have developed (casual) mobile games.</p>
                     </div>
-                </div>
+                </a>
 
                 <!-- 3D Art -->
-                <div style="margin-bottom: 22px; display: flex; align-items: flex-start; gap: 15px; background:#00000015; padding: 15px; flex-wrap: wrap;">
-                    <a href="/portfolio/3d/" style="display:block; padding:2px 5px 2px 2px; color:#008080; text-decoration:underline;"><i class="fa-solid fa-cube fa-fw" style="font-size: 36px; color: #008080; margin-top: 4px;"></i></a>
-                    <div>
-                        <a href="/portfolio/3d/" style="display:block; padding:2px 5px 2px 2px; color:#008080; text-decoration:underline;"><h2 style="margin: 0 0 10px 0; color: #008080; font-size: 24px;">3D Art</h2></a>
-                        <p style="margin: 0; line-height: 1.5; color: #333;">
-                            I do 3D art, from game assets to in-game designs and architecture.
-                        </p>
+                <a class="category-card" href="/portfolio/3d/">
+                    <i class="fa-solid fa-cube fa-fw category-icon" aria-hidden="true"></i>
+                    <div class="category-copy">
+                        <h2>3D Art</h2>
+                        <p>I do 3D art, from game assets to in-game designs and architecture.</p>
                     </div>
-                </div>
+                </a>
 
                 <!-- 2D Art -->
-                <div style="margin-bottom: 22px; display: flex; align-items: flex-start; gap: 15px; background:#00000015; padding: 15px; flex-wrap: wrap;">
-                    <a href="/portfolio/2d/" style="display:block; padding:2px 5px 2px 2px; color:#008080; text-decoration:underline;"><i class="fa-solid fa-paintbrush fa-fw" style="font-size: 36px; color: #008080; margin-top: 4px;"></i></a>
-                    <div>
-                        <a href="/portfolio/2d/" style="display:block; padding:2px 5px 2px 2px; color:#008080; text-decoration:underline;"><h2 style="margin: 0 0 10px 0; color: #008080; font-size: 24px;">2D Art</h2></a>
-                        <p style="margin: 0; line-height: 1.5; color: #333;">
-                            I do a mix of 2D work, including digital drawing, Photoshop edits, Lightroom color work, and vector art.
-                        </p>
+                <a class="category-card" href="/portfolio/2d/">
+                    <i class="fa-solid fa-paintbrush fa-fw category-icon" aria-hidden="true"></i>
+                    <div class="category-copy">
+                        <h2>2D Art</h2>
+                        <p>I do a mix of 2D work, including digital drawing, Photoshop edits, Lightroom color work, and vector art.</p>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Misc -->
-                <div style="margin-bottom: 22px; display: flex; align-items: flex-start; gap: 15px; background:#00000015; padding: 15px; flex-wrap: wrap;">
-                    <a href="/portfolio/misc/" style="display:block; padding:2px 5px 2px 2px; color:#008080; text-decoration:underline;"><i class="fa-solid fa-chalkboard-teacher fa-fw" style="font-size: 36px; color: #008080; margin-top: 4px;"></i></a>
-                    <div>
-                        <a href="/portfolio/misc/" style="display:block; padding:2px 5px 2px 2px; color:#008080; text-decoration:underline;"><h2 style="margin: 0 0 10px 0; color: #008080; font-size: 24px;">Miscellaneous</h2></a>
-                        <p style="margin: 0; line-height: 1.5; color: #333;">
-                            Prototypes and other cool stuff.
-                        </p>
+                <a class="category-card" href="/portfolio/misc/">
+                    <i class="fa-solid fa-chalkboard-teacher fa-fw category-icon" aria-hidden="true"></i>
+                    <div class="category-copy">
+                        <h2>Miscellaneous</h2>
+                        <p>Prototypes and other cool stuff.</p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>

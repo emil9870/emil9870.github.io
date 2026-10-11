@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="/css/styles3.css">
 	<!-- Font Awesome 6 icons? -->
 	<link rel="stylesheet" href="/css/all.min.css">
-    <script defer src="script.js"></script>
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="media-gallery.css">
+    <script defer src="media-gallery.js"></script>
 	<style>
         html, body {
             height: 100%;
             margin: 0;
-            background: rgb(255, 255, 255);
+            background: #008080;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -198,7 +200,7 @@
 <div class="win98-window">
     <!-- Title Bar -->
     <div class="title-bar">
-        <div class="title-bar-text">Portfolio v0.7 - Emil Kilpeläinen</div>
+        <div class="title-bar-text">Portfolio v0.8 - Emil Kilpeläinen</div>
         <div class="title-bar-controls">
             <button aria-label="Help"></button>
             <button aria-label="Close"></button>
@@ -264,14 +266,40 @@
             <div class="projects-container">
                 <div class="project-section" id="shelf-employed">
                     <div class="project-text">
-                        <h2>Shelf-Employed</h2>
+                        <h2 class="shelf-heading">
+                            <a class="shelf-banner" href="https://store.steampowered.com/app/5038020/ShelfEmployed/" target="_blank" rel="noopener noreferrer" aria-label="View Shelf-Employed on Steam (opens in a new tab)">
+                                <img src="/imgs/shelf-employed/banner.png" alt="Shelf-Employed" width="462" height="174">
+                            </a>
+                        </h2>
                         <p>A cozy first-person organizing game I made, set in a magical warehouse. Sort thousands of scattered packages, unlock spells, and upgrade your abilities as you bring order to the shelves.</p>
                         <a href="https://store.steampowered.com/app/5038020/ShelfEmployed/" style="display: inline-block; margin-top: 15px; color: #008080; text-decoration: underline;">
                             <i class="fa-solid fa-globe fa-fw" aria-hidden="true"></i> View on Steam
                         </a>
                     </div>
-                    <div class="project-media">
-                        <img src="/imgs/shelf-employed.jpg" alt="Shelf-Employed capsule art showing a magical warehouse full of packages" width="748" height="896" style="height: auto;">
+                    <div class="media-gallery" role="region" aria-label="Shelf-Employed media gallery">
+                        <div class="media-viewer" id="media-viewer">
+                            <video class="media-video" src="/videos/shelf-employed-organizing.mp4" poster="/imgs/shelf-employed/organizing-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Organizing packages on the warehouse shelves"></video>
+                            <img class="media-image" alt="" hidden>
+                            <button class="media-playback" type="button" aria-label="Pause gameplay video">Pause</button>
+                        </div>
+                        <div class="media-thumbnails" role="group" aria-label="Choose gallery media">
+                            <button type="button" class="media-thumbnail" data-kind="video" data-src="/videos/shelf-employed-organizing.mp4" data-poster="/imgs/shelf-employed/organizing-poster.jpg" data-alt="Organizing packages on the warehouse shelves" aria-label="Show organizing gameplay video" aria-pressed="true" aria-controls="media-viewer">
+                                <img src="/imgs/shelf-employed/organizing-poster.jpg" alt="" width="1636" height="720">
+                                <span class="media-video-label" aria-hidden="true">&#9654; Video</span>
+                            </button>
+                            <button type="button" class="media-thumbnail" data-src="/imgs/shelf-employed/sealed-door.webp" data-alt="A glowing blue sealed door in the magical warehouse" aria-label="Show sealed door screenshot" aria-pressed="false" aria-controls="media-viewer">
+                                <img src="/imgs/shelf-employed/sealed-door-thumb.webp" alt="" width="320" height="180" loading="lazy">
+                            </button>
+                            <button type="button" class="media-thumbnail" data-src="/imgs/shelf-employed/picking-packages.webp" data-alt="Picking up scattered packages in the warehouse" aria-label="Show package pickup screenshot" aria-pressed="false" aria-controls="media-viewer">
+                                <img src="/imgs/shelf-employed/picking-packages-thumb.webp" alt="" width="320" height="180" loading="lazy">
+                            </button>
+                            <button type="button" class="media-thumbnail" data-src="/imgs/shelf-employed/warehouse-aisles.webp" data-alt="Warehouse aisles filled with colorful magical packages" aria-label="Show warehouse aisles screenshot" aria-pressed="false" aria-controls="media-viewer">
+                                <img src="/imgs/shelf-employed/warehouse-aisles-thumb.webp" alt="" width="320" height="180" loading="lazy">
+                            </button>
+                            <button type="button" class="media-thumbnail" data-src="/imgs/shelf-employed/stocking-shelves.webp" data-alt="Baled Troll Moss packages organized on their shelf" aria-label="Show organized shelf screenshot" aria-pressed="false" aria-controls="media-viewer">
+                                <img src="/imgs/shelf-employed/stocking-shelves-thumb.webp" alt="" width="320" height="180" loading="lazy">
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -280,43 +308,64 @@
                         <h2>Fireflight</h2>
                         <p>An online multiplayer game I'm developing in Unity. Catch bugs through minigames, draw together, relax on swings, and shop for items to equip with friends. Drawing, shopping, and social activities are synchronized between players. Fishing and its minigame are still in development.</p>
                     </div>
-                    <div class="project-media">
-                        <img src="/imgs/fireflight-drawing.gif" alt="Drawing on a shared canvas in Fireflight" width="315" height="177" loading="lazy" style="max-width: 315px; height: auto; margin: 0 auto;">
+                    <div class="media-gallery" role="region" aria-label="Fireflight media gallery">
+                        <div class="media-viewer" id="fireflight-viewer">
+                            <img class="media-image" src="/imgs/fireflight-drawing.gif" alt="Drawing on a shared canvas in Fireflight" width="315" height="177" loading="lazy">
+                            <video class="media-video" playsinline preload="metadata" hidden></video>
+                            <button class="media-playback" type="button" hidden>Play</button>
+                        </div>
+                        <div class="media-thumbnails" role="group" aria-label="Choose Fireflight media">
+                            <button type="button" class="media-thumbnail" data-src="/imgs/fireflight-drawing.gif" data-alt="Drawing on a shared canvas in Fireflight" aria-label="Show shared drawing gameplay" aria-pressed="true" aria-controls="fireflight-viewer">
+                                <img src="/imgs/fireflight-drawing.gif" alt="" width="315" height="177" loading="lazy">
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 1: Media on RIGHT (default flex) -->
                 <div class="project-section" id="project1">
                     <div class="project-text">
                         <h2>Bloodhaven</h2>
                         <p>Built in Unity, made in team of 5 members. 2D isometric game, where players attack innocent creatures in a fantasy setting. Player collects experience to gain levels, which leads to stat upgrades. Players can collect resources to use at stores, to improve their experience throughout the game.</p>
                     </div>
-                    <div class="project-media">
-                        <video src="/videos/bloodhaven_trailer.mp4" controls></video>
+                    <div class="media-gallery" role="region" aria-label="Bloodhaven media gallery">
+                        <div class="media-viewer" id="bloodhaven-viewer">
+                            <video class="media-video" src="/videos/bloodhaven_trailer.mp4" poster="/imgs/bloodhaven-trailer-poster.jpg" controls playsinline preload="metadata" aria-label="Bloodhaven trailer"></video>
+                            <img class="media-image" alt="" hidden>
+                            <button class="media-playback" type="button" hidden>Play</button>
+                        </div>
+                        <div class="media-thumbnails" role="group" aria-label="Choose Bloodhaven media">
+                            <button type="button" class="media-thumbnail" data-kind="video" data-controls="true" data-src="/videos/bloodhaven_trailer.mp4" data-poster="/imgs/bloodhaven-trailer-poster.jpg" data-alt="Bloodhaven trailer" aria-label="Show Bloodhaven trailer" aria-pressed="true" aria-controls="bloodhaven-viewer">
+                                <img src="/imgs/bloodhaven-trailer-poster.jpg" alt="" width="1280" height="720" loading="lazy">
+                                <span class="media-video-label" aria-hidden="true">&#9654; Video</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <!-- Project 2: Media on LEFT (default flex) -->
                 <div class="project-section" id="project2">
                     <div class="project-text">
                         <h2>Co-op Puzzle Rat game</h2>
                         <p>Built on Unreal Engine, I create important components (such as Stamina, Health, Item Data) in C++, handled in blueprints. Project includes me and another member.</p>
                         <p>Early in development.</p>
                     </div>
-                    <div class="project-media">
-                        <img src="/imgs/CharacterModel2025-11-15.png" alt="Blender Character" style="width: 65%; height: auto; border-radius: 40px; padding: 30px;">
-                    </div>
+                    <figure class="media-gallery" role="region" aria-label="Co-op Puzzle Rat game media gallery">
+                        <div class="media-viewer" id="rat-viewer">
+                            <img class="media-image" src="/imgs/CharacterModel2025-11-15.png" alt="Rat character model in Blender" loading="lazy">
+                            <video class="media-video" playsinline preload="metadata" aria-describedby="rat-caption" hidden></video>
+                            <button class="media-playback" type="button" hidden>Play</button>
+                        </div>
+                        <figcaption class="media-caption" id="rat-caption" aria-live="polite" hidden></figcaption>
+                        <div class="media-thumbnails" role="group" aria-label="Choose Co-op Puzzle Rat game media">
+                            <button type="button" class="media-thumbnail" data-src="/imgs/CharacterModel2025-11-15.png" data-alt="Rat character model in Blender" aria-label="Show rat character model" aria-pressed="true" aria-controls="rat-viewer">
+                                <img src="/imgs/CharacterModel2025-11-15.png" alt="" loading="lazy">
+                            </button>
+                            <button type="button" class="media-thumbnail" data-kind="video" data-src="/videos/85811dd9d614213a71da5ae0da73172c.mp4" data-poster="/imgs/rat-expressions-poster.jpg" data-alt="Rat character showing different facial expressions" data-caption="Different facial expressions through texture mapping." aria-label="Show facial expression video" aria-pressed="false" aria-controls="rat-viewer">
+                                <img src="/imgs/rat-expressions-poster.jpg" alt="" width="776" height="446" loading="lazy">
+                                <span class="media-video-label" aria-hidden="true">&#9654; Video</span>
+                            </button>
+                        </div>
+                    </figure>
                 </div>
 
-                <!-- Project 2: Media on RIGHT (row-reverse) -->
-                <div class="project-section">
-                    <div class="project-text">
-                        <p>Different facial expressions through texture mapping.</p>
-                    </div>
-                    <div class="project-media">
-                        <video src="/videos/85811dd9d614213a71da5ae0da73172c.mp4" controls muted loop></video>
-                        <!-- Or img: <img src="/imgs/project2-thumb.jpg" alt="Project 2 thumbnail"> -->
-                    </div>
-                </div>
             </div>
         </div>
     </div>
