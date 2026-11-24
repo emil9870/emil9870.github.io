@@ -72,6 +72,16 @@
     display: none;
 }
 
+/* Trim 150px from the shoreline screenshot's left edge, preserving its height. */
+.media-viewer:has(.media-image--crop-left) {
+    aspect-ratio: 1887 / 970;
+}
+
+.media-viewer .media-image--crop-left {
+    object-fit: cover;
+    object-position: right center;
+}
+
 .media-playback {
     position: absolute;
     right: 10px;
@@ -103,6 +113,10 @@
     height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+}
+
+.media-thumbnail[data-crop-left="true"] img {
+    object-position: right center;
 }
 
 .media-thumbnail[aria-pressed="true"] {

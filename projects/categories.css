@@ -70,6 +70,16 @@
     transform: translate(1px, 1px);
 }
 
+.category-card--coming-soon {
+    cursor: default;
+}
+
+@media (hover: hover) {
+    .category-card--coming-soon:hover {
+        background: var(--surface);
+    }
+}
+
 @media (max-width: 600px) {
     .win98-window .window-body {
         display: block;

@@ -22,6 +22,7 @@ document.querySelectorAll('.media-gallery').forEach(gallery => {
         video.hidden = !isVideo;
         playback.hidden = !isVideo || hasControls;
         image.hidden = isVideo;
+        image.classList.toggle('media-image--crop-left', selected.dataset.cropLeft === 'true');
 
         if (caption) {
             caption.textContent = selected.dataset.caption || '';
